@@ -4,8 +4,7 @@ function currencyConvert($from,$to,$amount){
 
 
 
-    $url = "http://www.google.com/finance/converter?a=$amount&from=$from&to=$to";
-
+    $url = "http://www.google.com/finance/converter?a=" . rawurlencode($amount) . "&from=" . rawurlencode($from) . "&to=" . rawurlencode($to);
 
 
     $request = curl_init();
